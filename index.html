@@ -12,31 +12,106 @@
 <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a></div>
 </nav>
-<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-        <br><br>
-        <h1 class="header center orange-text">厅内实时检测数据</h1>
-        <h5 class="header center grey-text">2017/06/04 12:45</h5>
-        <div class="row center valign-wrapper no-margin">
-            <h5 class="header col s4 light">47.7 ftl</h5>
-            <h5 class="header col s4 light">14.2 ftl</h5>
-            <div class="header col s4">
-                <h5 class="row no-margin light">X: 0.314</h5>
-                <h5 class="row no-margin light">Y: 0.361</h5>
-            </div>
+
+<div class="container">
+    <br><br>
+    <h3 class="header center">厅内实时检测数据</h3>
+    <h5 class="header center grey-text">2017/06/04 12:45:43</h5>
+    <div class="row center valign-wrapper no-margin">
+        <h4 class="header col s4 light">47.7 ftl</h4>
+        <h4 class="header col s4 light">14.2 ftl</h4>
+        <div class="header col s4">
+            <h4 class="row no-margin light">X: 0.314</h4>
+            <h4 class="row no-margin light">Y: 0.361</h4>
         </div>
-        <div class="row center">
-            <h5 class="header col s4 light">实时亮度</h5>
-            <h5 class="header col s4 light">3D亮度</h5>
-            <h5 class="header col s4 light">实时色彩坐标</h5>
-        </div>
-        <br><br>
+    </div>
+    <div class="row center no-margin">
+        <h6 class="header col s4 light">实时亮度</h6>
+        <h6 class="header col s4 light">3D亮度</h6>
+        <h6 class="header col s4 light">实时色彩坐标</h6>
     </div>
 </div>
 
 
-<script type="javascript" src="node_modules/materialize-css/node_modules/jquery/dist/jquery.js"></script>
-<script type="javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script>
-<script type="javascript" src="js/init.js"></script>
+<div class="container">
+    <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+            <h3 class="header center ">测试片检测数据</h3>
+            <h5 class="header center grey-text">2017/06/04 12:45</h5>
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">brightness_medium</i></h2>
+                    <h3 class="center">47.7ftl</h3>
+                    <h5 class="center light">本影厅检测数据</h5>
+                    <p class="center light">其他影院检测数据14ftl</p>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">remove_red_eye</i></h2>
+                    <h3 class="center">14.2ftl</h3>
+                    <h5 class="center light">本影厅3D亮度</h5>
+                    <p class="center light">其他影城3D亮度6ftl</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">palette</i></h2>
+                    <!--<h3 class="center">47.7ftl</h3>-->
+                    <h3 class="center light">本影厅色域范围</h3>
+                    <table class="highlight centered">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>R</th>
+                            <th>G</th>
+                            <th>B</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <td>X</td>
+                            <td>0.680</td>
+                            <td>0.320</td>
+                            <td>0.265</td>
+                        </tr>
+                        <tr>
+                            <td>Y</td>
+                            <td>0.690</td>
+                            <td>0.150</td>
+                            <td>0.060</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div class="row">
+    <div id="canvas-container" class="col l4 m8 s12 offset-l4 offset-m2 center">
+        <canvas id="color-canvas"></canvas>
+    </div>
+</div>
+
+<footer class="page-footer orange">
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="orange-text text-lighten-3" href="https://github.com/amaoamao">Peter Mao</a>
+        </div>
+    </div>
+</footer>
+
+<script src="node_modules/materialize-css/node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/materialize-css/dist/js/materialize.js"></script>
+<script src="js/init.js"></script>
 </body>
 </html>
