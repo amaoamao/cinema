@@ -1,0 +1,15 @@
+{
+  "name": "cinema",
+  "version": "1.0.0",
+  "description": "null",
+  "dependencies": {
+    "http-server": "^0.10.0",
+    "materialize-css": "^0.98.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "serve": "node_modules/http-server/bin/http-server -o -c-1 -a 127.0.0.1"
+  },
+  "author": "Peter Mao",
+  "license": "ISC"
+}
