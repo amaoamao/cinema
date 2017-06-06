@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>Title</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="node_modules/materialize-css/dist/css/materialize.css" rel="stylesheet">
+    <link href="node_modules/materialize-css/dist/css/materialize.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
 </head>
 <body>
@@ -13,16 +13,16 @@
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a></div>
 </nav>
 
-<div class="container">
+<div class="container" id="real">
     <br><br>
     <h3 class="header center">厅内实时检测数据</h3>
     <h5 class="header center grey-text">2017/06/04 12:45:43</h5>
     <div class="row center valign-wrapper no-margin">
-        <h4 class="header col s4 light">47.7 ftl</h4>
-        <h4 class="header col s4 light">14.2 ftl</h4>
+        <h4 class="header col s4 light">{{ luminance }}ftl</h4>
+        <h4 class="header col s4 light">{{ luminance * 0.3 }}ftl</h4>
         <div class="header col s4">
-            <h4 class="row no-margin light">X: 0.314</h4>
-            <h4 class="row no-margin light">Y: 0.361</h4>
+            <h4 class="row no-margin light">X: {{ chromx }}</h4>
+            <h4 class="row no-margin light">Y: {{ chromy }}</h4>
         </div>
     </div>
     <div class="row center no-margin">
@@ -33,17 +33,15 @@
 </div>
 
 
-<div class="container">
+<div class="container" id="test">
     <div class="section">
-
-        <!--   Icon Section   -->
         <div class="row">
             <h3 class="header center ">测试片检测数据</h3>
             <h5 class="header center grey-text">2017/06/04 12:45</h5>
             <div class="col s12 m4">
                 <div class="icon-block">
                     <h2 class="center light-blue-text"><i class="material-icons">brightness_medium</i></h2>
-                    <h3 class="center">47.7ftl</h3>
+                    <h3 class="center">{{ w }} ftl</h3>
                     <h5 class="center light">本影厅检测数据</h5>
                     <p class="center light">其他影院检测数据14ftl</p>
                 </div>
@@ -51,7 +49,7 @@
             <div class="col s12 m4">
                 <div class="icon-block">
                     <h2 class="center light-blue-text"><i class="material-icons">remove_red_eye</i></h2>
-                    <h3 class="center">14.2ftl</h3>
+                    <h3 class="center">{{ w * 0.3 }} ftl</h3>
                     <h5 class="center light">本影厅3D亮度</h5>
                     <p class="center light">其他影城3D亮度6ftl</p>
                 </div>
@@ -60,7 +58,6 @@
             <div class="col s12 m4">
                 <div class="icon-block">
                     <h2 class="center light-blue-text"><i class="material-icons">palette</i></h2>
-                    <!--<h3 class="center">47.7ftl</h3>-->
                     <h3 class="center light">本影厅色域范围</h3>
                     <table class="highlight centered">
                         <thead>
@@ -73,27 +70,27 @@
                         </thead>
                         <tr>
                             <td>X</td>
-                            <td>0.680</td>
-                            <td>0.320</td>
-                            <td>0.265</td>
+                            <td>{{ rx }}</td>
+                            <td>{{ gx }}</td>
+                            <td>{{ bx }}</td>
                         </tr>
                         <tr>
                             <td>Y</td>
-                            <td>0.690</td>
-                            <td>0.150</td>
-                            <td>0.060</td>
+                            <td>{{ ry }}</td>
+                            <td>{{ gy }}</td>
+                            <td>{{ by }}</td>
                         </tr>
                     </table>
                 </div>
             </div>
+
         </div>
 
     </div>
-
 </div>
 <div class="row">
     <div id="canvas-container" class="col l4 m8 s12 offset-l4 offset-m2 center">
-        <canvas id="color-canvas"></canvas>
+        <canvas id="color-canvas" v-refresh="{rx: rx, ry: ry, gx: gx, gy: gy, bx: bx, by: by, w: w}"></canvas>
     </div>
 </div>
 
@@ -110,8 +107,9 @@
     </div>
 </footer>
 
-<script src="node_modules/materialize-css/node_modules/jquery/dist/jquery.js"></script>
-<script src="node_modules/materialize-css/dist/js/materialize.js"></script>
+<script src="node_modules/materialize-css/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+<script src="node_modules/vue/dist/vue.min.js"></script>
 <script src="js/init.js"></script>
 </body>
 </html>

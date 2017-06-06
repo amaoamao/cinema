@@ -4,7 +4,8 @@
   "description": "null",
   "dependencies": {
     "http-server": "^0.10.0",
-    "materialize-css": "^0.98.2"
+    "materialize-css": "^0.98.2",
+    "vue": "^2.3.3"
   },
   "devDependencies": {},
   "scripts": {
