@@ -54,7 +54,7 @@ gulp.task('csslib', function () {
 });
 
 gulp.task('fonts', function () {
-    return gulp.src(["node_modules/materialize-css/dist/fonts/roboto/*.*"])
+    return gulp.src(["node_modules/materialize-css/dist/fonts/roboto/*.*", "fonts/*.*"])
         .pipe(gulp.dest('dist/fonts/roboto'));
 });
 
