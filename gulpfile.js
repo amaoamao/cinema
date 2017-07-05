@@ -31,7 +31,7 @@ gulp.task('javascript', ['jslib'], function () {
 
 
 gulp.task('jslib', function () {
-    return gulp.src(["node_modules/materialize-css/node_modules/jquery/dist/jquery.min.js",
+    return gulp.src(["node_modules/jquery/dist/jquery.min.js",
         "node_modules/materialize-css/dist/js/materialize.min.js",
         "node_modules/vue/dist/vue.min.js"])
         .pipe(concat('vendor.js'))

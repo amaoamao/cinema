@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <title></title>
     <!-- build:css -->
     <link href="node_modules/materialize-css/dist/css/materialize.min.css" rel="stylesheet">
@@ -39,16 +40,18 @@
             <h5 class="header center grey-text">{{ timeNow }}</h5>
             <div class="col s12 m4">
                 <div class="icon-block">
-                    <h2 class="center light-blue-text"><i class="material-icons">brightness_medium</i></h2>
-                    <h3 class="center">{{ luminance.toFixed(3) }} ftl</h3>
+                    <h2 class="center">
+                        <img src="/img/ic_brightness.svg"/>
+                    </h2>
+                    <h3 class="center">{{ w.toFixed(3) }} ftl</h3>
                     <h5 class="center light">本影厅检测数据</h5>
                     <p class="center light">其他影院检测数据14ftl</p>
                 </div>
             </div>
             <div class="col s12 m4">
                 <div class="icon-block">
-                    <h2 class="center light-blue-text"><i class="material-icons">remove_red_eye</i></h2>
-                    <h3 class="center">{{ (luminance * 0.3).toFixed(2) }} ftl</h3>
+                    <h2 class="center light-blue-text"><img src="/img/ic_remove_red_eye.svg"/></h2>
+                    <h3 class="center">{{ (w * 0.3).toFixed(2) }} ftl</h3>
                     <h5 class="center light">本影厅3D亮度</h5>
                     <p class="center light">其他影城3D亮度6ftl</p>
                 </div>
@@ -56,8 +59,8 @@
 
             <div class="col s12 m4">
                 <div class="icon-block">
-                    <h2 class="center light-blue-text"><i class="material-icons">palette</i></h2>
-                    <h3 class="center light">本影厅色域范围</h3>
+                    <h2 class="center light-blue-text"><img src="/img/ic_palette.svg"/></h2>
+                    <h4 class="center light">本影厅色域范围</h4>
                     <table class="highlight centered">
                         <thead>
                         <tr>
@@ -95,7 +98,7 @@
 
 
 <!-- build:js -->
-<script src="node_modules/materialize-css/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
 <script src="node_modules/vue/dist/vue.min.js"></script>
 <script src="js/init.js"></script>

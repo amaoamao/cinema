@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "null",
   "dependencies": {
+    "jquery": "^3.2.1",
     "materialize-css": "^0.98.2",
     "vue": "^2.3.3"
   },
